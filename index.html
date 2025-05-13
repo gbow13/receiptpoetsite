@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your Art Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Your Name's Art</h1>
+    <p>Original and custom art commissions available</p>
+  </header>
+
+  <section class="gallery">
+    <img src="images/art1.jpg" alt="Artwork 1" />
+    <img src="images/art2.jpg" alt="Artwork 2" />
+    <!-- Add more images as needed -->
+  </section>
+
+  <section class="commission-form">
+    <h2>Request a Commission</h2>
+    <form action="https://formspree.io/f/xkgrpvnb" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" name="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" name="email" required />
+
+      <label for="details">What would you like?</label>
+      <textarea name="details" rows="5" required></textarea>
+
+      <button type="submit">Send Request</button>
+    </form>
+    <p class="note">I'll get back to you by email with pricing and next steps.</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Your Name</p>
+  </footer>
+</body>
+</html>
