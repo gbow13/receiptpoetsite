@@ -2,41 +2,53 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Receipt Poet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Your Art Site</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Helvetica+Neue:wght@400;600&display=swap">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
-    <h1>The Receipt Poet</h1>
-    <p>Receipt art for all</p>
+    <h1>Your Name</h1>
+    <p>Digital & Traditional Artist</p>
+    <div style="margin-top: 1rem;">
+      <a href="https://instagram.com/yourusername" target="_blank" aria-label="Instagram" style="margin: 0 0.5rem;">
+        <i class="fab fa-instagram fa-lg"></i>
+      </a>
+      <a href="mailto:youremail@example.com" aria-label="Email" style="margin: 0 0.5rem;">
+        <i class="fas fa-envelope fa-lg"></i>
+      </a>
+    </div>
   </header>
 
+  <!-- Gallery -->
   <section class="gallery">
-    <img src="images/AZ close-up.png" alt="Artwork 1" />
-    <img src="images/AZ full.jpg" alt="Artwork 2" />
-    <!-- Add more images as needed -->
+    <img src="images/art1.jpg" alt="Artwork 1">
+    <img src="images/art2.jpg" alt="Artwork 2">
+    <img src="images/art3.jpg" alt="Artwork 3">
+    <!-- Add more images here -->
   </section>
 
+  <!-- Commission Form -->
   <section class="commission-form">
     <h2>Request a Commission</h2>
-    <form action="https://formspree.io/f/xkgrpvnb" method="POST">
-      <label for="name">Your Name</label>
-      <input type="text" name="name" required />
-
-      <label for="email">Your Email</label>
-      <input type="email" name="email" required />
-
-      <label for="details">What would you like?</label>
-      <textarea name="details" rows="5" required></textarea>
-
+    <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+      <input type="text" name="name" placeholder="Your name" required>
+      <input type="email" name="email" placeholder="Your email" required>
+      <textarea name="details" rows="5" placeholder="Tell me what you're looking for..." required></textarea>
       <button type="submit">Send Request</button>
     </form>
-    <p class="note">I'll get back to you by email with pricing and next steps.</p>
+    <p class="note">You'll receive a reply by email to confirm details and pricing. No payment is needed yet.</p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    <p>&copy; 2025 Your Name</p>
+    &copy; 2025 Your Name. All rights reserved.
   </footer>
+
 </body>
 </html>
