@@ -1,82 +1,75 @@
-/* Base reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-  background: #fff;
-  color: #000;
-  line-height: 1.6;
-  max-width: 1000px;
-  margin: auto;
-  padding: 2rem 1rem;
+  margin: 0;
+  font-family: sans-serif;
+  background: white;
+  color: black;
 }
 
-/* Hero Image */
-.hero img {
+.landing-img {
   width: 100%;
-  height: auto;
-  border-radius: 10px;
-  margin-bottom: 2rem;
+  display: block;
+  max-height: 60vh;
+  object-fit: cover;
 }
 
-/* Intro Text */
-.intro {
+.intro-text {
+  padding: 2rem;
   text-align: center;
-  margin-bottom: 3rem;
 }
 
-.intro h1 {
-  font-size: 2.5rem;
-  font-weight: 600;
-  margin-bottom: 1rem;
-}
-
-.intro p {
-  font-size: 1.1rem;
-  color: #333;
-  max-width: 700px;
-  margin: 0 auto;
-}
-
-/* Tile Grid */
-.tiles {
+.grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
-  margin-top: 2rem;
+  padding: 2rem;
+  text-align: center;
 }
 
-.tile {
-  text-align: center;
+.grid a {
   text-decoration: none;
   color: inherit;
-  transition: transform 0.3s ease;
 }
 
-.tile img {
+.grid img {
   width: 100%;
-  height: auto;
-  border-radius: 8px;
+  max-width: 300px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
-.tile h2 {
-  margin-top: 0.75rem;
-  font-size: 1.2rem;
+/* Subpage styles */
+.subpage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  gap: 2rem;
 }
 
-.tile:hover {
-  transform: scale(1.02);
+.subpage img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  font-size: 0.85rem;
-  color: #999;
-  margin-top: 4rem;
+.subpage .blurb {
+  max-width: 400px;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
+
+/* Slideshow functionality */
+<script>
+  let slideIndex = 0;
+  function cycleImages(id, images) {
+    const img = document.getElementById(id);
+    setInterval(() => {
+      slideIndex = (slideIndex + 1) % images.length;
+      img.src = images[slideIndex];
+    }, 3000);
+  }
+</script>
