@@ -4,22 +4,57 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Receipt Poet</title>
+  <title>Receipt Poet</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .hero-container {
+      position: relative;
+      width: 100%;
+      max-height: 60vh;
+      overflow: hidden;
+    }
+    .landing-img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+    .intro-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 2rem;
+      text-align: center;
+      max-width: 90%;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .intro-overlay h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+    .intro-overlay p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      color: #333;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <img src="images/hero.jpg" alt="Landing" class="landing-img" />
-    <div class="intro-text">
-      <h1>The Receipt Poet</h1>
-      <p>The viral artist who works exclusively in the medium of till receipts.</p>
+    <div class="hero-container">
+      <img src="images/landing-image.jpg" alt="Landing" class="landing-img" />
+      <div class="intro-overlay">
+        <h1>Welcome to Receipt Poet</h1>
+        <p>A collection of art projects exploring everyday moments, repetition, and patterns. Click below to explore each series.</p>
+      </div>
     </div>
   </header>
 
   <main class="grid">
-    <a href="atoz.html"><img src="images/az close-up.jpg" alt="AtoZ" /><span>AtoZ</span></a>
+    <a href="atoz.html"><img src="images/atoz-thumb.jpg" alt="AtoZ" /><span>AtoZ</span></a>
     <a href="1to100.html"><img src="images/1to100-thumb.jpg" alt="1to100" /><span>1to100</span></a>
-    <a href="chraistmastree.html"><img src="images/christmas-tree-close.jpg" alt="ChraistmasTree" /><span>ChraistmasTree</span></a>
+    <a href="chraistmastree.html"><img src="images/chraistmastree-thumb.jpg" alt="ChraistmasTree" /><span>ChraistmasTree</span></a>
     <a href="contact.html"><img src="images/contact-thumb.jpg" alt="Contact & Commissions" /><span>Contact & Commissions</span></a>
   </main>
 </body>

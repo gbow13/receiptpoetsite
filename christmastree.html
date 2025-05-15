@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="simple-header">
+    <h1>The Receipt Poet</h1>
+    <p>The viral artist who works exclusively in the medium of till receipts.</p>
+  </header>
+
   <div class="subpage">
     <img id="atoz-img" src="images/atoz1.jpg" alt="AtoZ" />
     <div class="blurb">
@@ -14,7 +19,16 @@
       <p>This series explores 26 visual moments, one for each letter of the alphabet. Each piece is a meditation on simplicity and structure.</p>
     </div>
   </div>
+
   <script>
+    let slideIndex = 0;
+    function cycleImages(id, images) {
+      const img = document.getElementById(id);
+      setInterval(() => {
+        slideIndex = (slideIndex + 1) % images.length;
+        img.src = images[slideIndex];
+      }, 3000);
+    }
     cycleImages("atoz-img", ["images/atoz1.jpg", "images/atoz2.jpg", "images/atoz3.jpg"]);
   </script>
 </body>
