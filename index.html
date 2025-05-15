@@ -12,28 +12,27 @@
       max-height: 60vh;
       overflow: hidden;
     }
+  
     .landing-img {
       width: 100%;
       display: block;
       object-fit: cover;
     }
+  
     .intro-overlay {
       position: absolute;
-      top: 50%;
+      bottom: 10%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translateX(-50%);
       text-align: center;
       max-width: 90%;
     }
+  
     .intro-overlay h1 {
       margin: 0;
-      font-size: 2.5rem;
+      font-size: 3.5rem;
       color: black;
-    }
-    .intro-overlay p {
-      margin-top: 1rem;
-      font-size: 1.2rem;
-      color: black;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -42,7 +41,7 @@
     <div class="hero-container">
       <img src="images/hero.jpg" alt="Landing" class="landing-img" />
       <div class="intro-overlay">
-        <p>The Receipt Poet. The viral sensation that works exclusively in the medium of till receipts.</p>
+        <h1>The Receipt Poet</h1>
       </div>
     </div>
   </header>
