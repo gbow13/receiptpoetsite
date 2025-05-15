@@ -1,20 +1,8 @@
 body {
   margin: 0;
-  font-family: sans-serif;
-  background: white;
+  font-family: Arial, sans-serif;
+  background-color: white;
   color: black;
-}
-
-.landing-img {
-  width: 100%;
-  display: block;
-  max-height: 60vh;
-  object-fit: cover;
-}
-
-.intro-text {
-  padding: 2rem;
-  text-align: center;
 }
 
 .grid {
@@ -28,48 +16,23 @@ body {
 .grid a {
   text-decoration: none;
   color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.grid a:hover {
+  transform: scale(1.05);
 }
 
 .grid img {
   width: 100%;
-  max-width: 300px;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border: 1px solid #ddd;
+  height: auto;
   border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Subpage styles */
-.subpage {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  gap: 2rem;
-}
-
-.subpage img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.subpage .blurb {
-  max-width: 400px;
+.grid span {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
   font-size: 1.1rem;
-  line-height: 1.6;
 }
-
-/* Slideshow functionality */
-<script>
-  let slideIndex = 0;
-  function cycleImages(id, images) {
-    const img = document.getElementById(id);
-    setInterval(() => {
-      slideIndex = (slideIndex + 1) % images.length;
-      img.src = images[slideIndex];
-    }, 3000);
-  }
-</script>
