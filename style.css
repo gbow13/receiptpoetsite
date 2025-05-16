@@ -86,3 +86,9 @@ body {
   font-family: 'Special Elite', monospace;
   color: black;
 }
+.sub-intro {
+  font-size: 0.85rem; /* smaller than before */
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 300;
+  color: #444;
+}
