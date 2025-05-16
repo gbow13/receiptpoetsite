@@ -70,3 +70,10 @@ body {
 .tile:hover .tile-label {
   opacity: 1;
 }
+.intro-text {
+  text-align: center;
+  padding: 1.5rem 2rem 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: black;
+}
