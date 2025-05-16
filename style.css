@@ -77,3 +77,12 @@ body {
   font-weight: 400;
   color: black;
 }
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
+.intro-text {
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.6rem;
+  font-family: 'Special Elite', monospace;
+  color: black;
+}
