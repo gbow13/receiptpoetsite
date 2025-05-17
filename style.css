@@ -92,3 +92,23 @@ body {
   font-weight: 300;
   color: #444;
 }
+.social-links {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.9rem;
+}
+
+.social-links a {
+  color: black;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-bottom 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  border-bottom: 1px solid black;
+}
