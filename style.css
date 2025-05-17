@@ -114,10 +114,10 @@ body {
 }
 .social-links {
   position: absolute;
-  top: 3rem;
-  right: 3rem;
+  top: 2rem;
+  right: 2rem;
   display: flex;
-  gap: 3rem;
+  gap: 2rem;
   z-index: 10;
 }
 
