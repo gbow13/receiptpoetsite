@@ -112,3 +112,21 @@ body {
 .social-links a:hover {
   border-bottom: 1px solid black;
 }
+.social-links {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  gap: 1rem;
+  z-index: 10;
+}
+
+.social-links a {
+  color: black;
+  font-size: 1.2rem;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.social-links a:hover {
+  opacity: 0.6;
+}
