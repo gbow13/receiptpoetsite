@@ -130,3 +130,31 @@ body {
 .social-links a:hover {
   opacity: 0.6;
 }
+.subpage-content {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 2rem;
+  align-items: flex-start;
+}
+
+.slideshow {
+  width: 50%;
+  position: relative;
+}
+
+.slide {
+  width: 100%;
+  display: none;
+  object-fit: contain;
+}
+
+.slide.active {
+  display: block;
+}
+
+.description {
+  width: 50%;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
