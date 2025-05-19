@@ -3,61 +3,60 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A to Z – The Receipt Poet</title>
+  <title>A to Z | The Receipt Poet</title>
   <link rel="stylesheet" href="style.css" />
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<script>
+<body>
+
+  <header>
+    <a href="index.html">
+      <img src="images/hero.jpg" alt="The Receipt Poet" class="landing-img" />
+    </a>
+    <div class="social-links">
+      <a href="https://instagram.com/thereceiptpoet" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="subpage-container">
+    <div class="slideshow-container">
+      <div class="slide fade">
+        <img src="images/AZ-closer.jpg" alt="A to Z Slide 1" />
+      </div>
+      <div class="slide fade">
+        <img src="images/AZ-close-up.jpg" alt="A to Z Slide 2" />
+      </div>
+      <div class="slide fade">
+        <img src="images/AZ-Frame.jpg" alt="A to Z Slide 3" />
+      </div>
+    </div>
+
+    <div class="text-content">
+      <h2>A to Z</h2>
+      <p>This series showcases an original poem inspired by each letter of the alphabet — all printed on authentic receipt paper. A playful exploration of language, form, and format.</p>
+    </div>
+  </main>
+
+  <script>
     let slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
-  
+
     function showSlide(index) {
       slides.forEach((slide, i) => {
         slide.classList.toggle("active", i === index);
       });
     }
-  
+
     function nextSlide() {
       currentSlide = (currentSlide + 1) % slides.length;
       showSlide(currentSlide);
     }
-  
+
     showSlide(currentSlide);
-    setInterval(nextSlide, 4000); // Change every 4 seconds
+    setInterval(nextSlide, 4000);
   </script>
-  
-<body>
- <header>
-        <div class="hero-container">
-          <a href="index.html">
-            <img src="images/hero.jpg" alt="Hero Image" class="landing-img" />
-          </a>
-          <div class="social-links top-right">
-            <a href="https://instagram.com/thereceiptpoet" target="_blank" aria-label="Instagram">
-              <i class="fab fa-instagram"></i>
-            </a>
-          </div>
-        </div>
-      </header>
 
-    <div class="slideshow-container">
-        <div class="slide fade">
-          <img src="images/AZ-closer.jpg" alt="AtoZ Slide 1">
-        </div>
-        <div class="slide fade">
-          <img src="images/AZ-close-up.jpg" alt="AtoZ Slide 2">
-        </div>
-        <div class="slide fade">
-          <img src="images/AZ-Frame.jpg" alt="AtoZ Slide 3">
-        </div>
-      </div>
-
-    <div class="subpage-text">
-      <h2>A to Z</h2>
-      <p>This project is a creative experiment where each letter of the alphabet is given a poetic twist, printed on a till receipt.</p>
-      <p>Each piece balances humor, social commentary, and the constraints of the medium to create something that is both fleeting and collectible.</p>
-    </div>
-  </main>
+</body>
+</html>
