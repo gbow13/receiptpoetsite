@@ -1,32 +1,45 @@
-/* Header styles */
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Courier New', Courier, monospace;
+  background-color: white;
+  color: black;
+  line-height: 1.6;
+}
+
+/* Header */
 .page-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
+  padding: 1.5rem 2rem;
+  border-bottom: 1px solid #ccc;
 }
 
 .page-header h1 {
   font-size: 2.2rem;
   font-weight: bold;
-  margin: 0;
 }
 
-/* Instagram icon */
 .instagram-icon {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
 }
 
-/* Page content layout */
+/* Main content */
 .page-content {
   display: flex;
   flex-wrap: wrap;
   padding: 2rem;
   gap: 2rem;
+  align-items: flex-start;
 }
 
-/* Slideshow styles */
 .slideshow-container {
   flex: 1 1 50%;
   max-width: 600px;
@@ -44,9 +57,9 @@
   display: block;
 }
 
-/* Description text */
 .description-text {
   flex: 1 1 40%;
+  padding: 1rem;
 }
 
 .description-text h2 {
@@ -56,5 +69,4 @@
 
 .description-text p {
   font-size: 1.1rem;
-  line-height: 1.6;
 }
