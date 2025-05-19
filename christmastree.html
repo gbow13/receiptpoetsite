@@ -3,33 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Christmas Tree</title>
+  <title>Christmas Tree | The Receipt Poet</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer>
+    let currentIndex = 0;
+    function cycleSlides() {
+      const slides = document.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        slide.classList.remove('active');
+        if (index === currentIndex) {
+          slide.classList.add('active');
+        }
+      });
+      currentIndex = (currentIndex + 1) % slides.length;
+    }
+    window.onload = () => {
+      cycleSlides();
+      setInterval(cycleSlides, 4000);
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header class="simple-header">
-    <h1>The Receipt Poet</h1>
-    <p>The viral artist who works exclusively in the medium of till receipts.</p>
+  <header>
+    <a href="index.html">
+      <img src="images/hero.jpg" alt="Hero" class="landing-img" />
+    </a>
+    <div class="social-links">
+      <a href="https://instagram.com/thereceiptpoet" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
   </header>
 
-  <div class="subpage">
-    <img id="atoz-img" src="images/atoz1.jpg" alt="AtoZ" />
-    <div class="blurb">
-      <h2>AtoZ</h2>
-      <p>This series explores 26 visual moments, one for each letter of the alphabet. Each piece is a meditation on simplicity and structure.</p>
+  <main class="subpage-container">
+    <div class="slideshow-container">
+      <img src="images/Christmas-Tree-close.jpg" class="slide active" alt="Christmas Tree slide 1" />
+      <img src="images/christmas-2.jpg" class="slide" alt="Christmas Tree slide 2" />
+      <img src="images/christmas-3.jpg" class="slide" alt="Christmas Tree slide 3" />
     </div>
-  </div>
-
-  <script>
-    let slideIndex = 0;
-    function cycleImages(id, images) {
-      const img = document.getElementById(id);
-      setInterval(() => {
-        slideIndex = (slideIndex + 1) % images.length;
-        img.src = images[slideIndex];
-      }, 3000);
-    }
-    cycleImages("atoz-img", ["images/atoz1.jpg", "images/atoz2.jpg", "images/atoz3.jpg"]);
-  </script>
+    <div class="text-content">
+      <h2>Christmas Tree</h2>
+      <p>This is the Christmas Tree project description. Replace this with real information about how it was made, what it represents, or any backstory you want to include.</p>
+    </div>
+  </main>
 </body>
 </html>

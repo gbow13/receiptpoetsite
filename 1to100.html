@@ -3,35 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Counting</title>
+  <title>1 to 100 | The Receipt Poet</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer>
+    let currentIndex = 0;
+    function cycleSlides() {
+      const slides = document.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        slide.classList.remove('active');
+        if (index === currentIndex) {
+          slide.classList.add('active');
+        }
+      });
+      currentIndex = (currentIndex + 1) % slides.length;
+    }
+    window.onload = () => {
+      cycleSlides();
+      setInterval(cycleSlides, 4000);
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
 <body>
-  <header class="simple-header">
-    <h1>The Receipt Poet</h1>
-    <p>The viral artist who works exclusively in the medium of till receipts.</p>
+  <header>
+    <a href="index.html">
+      <img src="images/hero.jpg" alt="Hero" class="landing-img" />
+    </a>
+    <div class="social-links">
+      <a href="https://instagram.com/thereceiptpoet" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
   </header>
 
-  <div class="subpage">
-    <img id="atoz-img" src="images/AZ-close-up.jpg" alt="AtoZ" />
-    <div class="blurb">
-      <h2>#3 Alphabet</h2>
-      <p>A simple premise, 26 items from A to Z. I posted this on social media and it took on a life of its own. It was featured on a number
-        of news websites
-      </p>
+  <main class="subpage-container">
+    <div class="slideshow-container">
+      <img src="images/AZ-closer.jpg" class="slide active" alt="1 to 100 slide 1" />
+      <img src="images/AZ-closer.jpg" class="slide" alt="1 to 100 slide 2" />
+      <img src="images/AZ-Frame.jpg" class="slide" alt="1 to 100 slide 3" />
     </div>
-  </div>
-
-  <script>
-    let slideIndex = 0;
-    function cycleImages(id, images) {
-      const img = document.getElementById(id);
-      setInterval(() => {
-        slideIndex = (slideIndex + 1) % images.length;
-        img.src = images[slideIndex];
-      }, 3000);
-    }
-    cycleImages("atoz-img", ["images/atoz1.jpg", "images/atoz2.jpg", "images/atoz3.jpg"]);
-  </script>
+    <div class="text-content">
+      <h2>One to One Hundred</h2>
+      <p>This is the 1 to 100 project description. Replace this paragraph with a real explanation of the concept, process, and meaning behind the piece. You can add as much or as little text as you like.</p>
+    </div>
+  </main>
 </body>
 </html>
