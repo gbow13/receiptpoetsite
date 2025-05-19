@@ -6,39 +6,59 @@ body {
   font-family: 'Courier New', Courier, monospace;
 }
 
-a {
-  text-decoration: none;
-  color: inherit;
+/* Header */
+header {
+  position: relative;
+  width: 100%;
+  max-height: 50vh;
+  overflow: hidden;
 }
 
-img {
-  max-width: 100%;
+.landing-img {
+  width: 100%;
   height: auto;
   display: block;
+  object-fit: cover;
+  cursor: pointer;
 }
 
-/* Intro text under hero image (Landing page) */
+.social-links {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+  z-index: 10;
+}
+
+.social-links a {
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: #555;
+}
+
+/* Intro text below header on landing page */
 .intro-text {
   text-align: center;
   padding: 1.5rem;
-  max-width: 800px;
-  margin: 0 auto;
 }
 
 .main-intro {
   font-size: 1.3rem;
   font-weight: bold;
-  font-family: 'Courier New', Courier, monospace;
-  margin-bottom: 0.5rem;
+  margin: 0.5rem 0;
 }
 
 .sub-intro {
   font-size: 1rem;
+  font-weight: normal;
   color: #666;
-  font-family: 'Courier New', Courier, monospace;
+  margin: 0.5rem 0;
 }
 
-/* Grid of tiles (Landing page) */
+/* Grid for landing page thumbnails */
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -54,6 +74,7 @@ img {
 
 .tile img {
   width: 100%;
+  height: auto;
   display: block;
   transition: opacity 0.3s ease;
 }
@@ -68,7 +89,6 @@ img {
   opacity: 0;
   transition: opacity 0.3s ease;
   pointer-events: none;
-  font-family: 'Courier New', Courier, monospace;
 }
 
 .tile:hover img {
@@ -79,89 +99,76 @@ img {
   opacity: 1;
 }
 
-/* Subpage layout (AtoZ, 1to100, etc.) */
-.subpage-layout {
+/* Subpage layout (AtoZ, etc.) */
+.subpage-container {
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
   padding: 2rem;
   gap: 2rem;
+  align-items: flex-start;
 }
 
-.slideshow {
-  flex: 1 1 400px;
-  max-width: 600px;
-  position: relative;
-}
-
-.slide {
-  width: 100%;
-  display: block;
-}
-
-.hidden {
-  display: none;
-}
-
-.subpage-text {
-  flex: 1 1 300px;
-  max-width: 500px;
-  font-size: 1.1rem;
-  line-height: 1.6;
-  font-family: 'Courier New', Courier, monospace;
-}
-.hero-container {
-  position: relative;
-  width: 100%;
-  max-height: 50vh;
-  overflow: hidden;
-}
-
-.landing-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-.social-links {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 10;
-}
-
-.social-links a {
-  font-size: 2rem;
-  color: black;
-  text-decoration: none;
-}
-
-.social-links a:hover {
-  color: gray;
-}
 .slideshow-container {
+  flex: 1 1 50%;
   position: relative;
-  width: 100%;
+  min-width: 300px;
   max-width: 600px;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
+  aspect-ratio: 3/4;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border: 1px solid #ccc;
 }
 
 .slide {
   position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   opacity: 0;
   transition: opacity 1s ease-in-out;
 }
 
-.slide img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
 .slide.active {
   opacity: 1;
+  z-index: 1;
+}
+
+/* Text on subpages */
+.text-content {
+  flex: 1 1 40%;
+  min-width: 250px;
+}
+
+.text-content h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .subpage-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .text-content {
+    text-align: center;
+  }
+
+  .social-links {
+    top: 0.5rem;
+    right: 1rem;
+  }
 }
