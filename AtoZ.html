@@ -25,13 +25,17 @@
         </div>
       </header>
 
-  <!-- Main AtoZ content -->
-  <main class="subpage-layout">
-    <div class="slideshow">
-      <img src="images/AZ-closer.jpg" class="slide" />
-      <img src="images/AZ-close-up.jpg" class="slide hidden" />
-      <img src="images/AZ-Frame.jpg" class="slide hidden" />
-    </div>
+      <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="images/atoz-1.jpg" alt="AtoZ Slide 1">
+        </div>
+        <div class="slide fade">
+          <img src="images/atoz-2.jpg" alt="AtoZ Slide 2">
+        </div>
+        <div class="slide fade">
+          <img src="images/atoz-3.jpg" alt="AtoZ Slide 3">
+        </div>
+      </div>
 
     <div class="subpage-text">
       <h2>A to Z</h2>
@@ -39,18 +43,3 @@
       <p>Each piece balances humor, social commentary, and the constraints of the medium to create something that is both fleeting and collectible.</p>
     </div>
   </main>
-
-  <!-- Simple JavaScript for slideshow -->
-  <script>
-    let currentSlide = 0;
-    const slides = document.querySelectorAll(".slide");
-
-    setInterval(() => {
-      slides[currentSlide].classList.add("hidden");
-      currentSlide = (currentSlide + 1) % slides.length;
-      slides[currentSlide].classList.remove("hidden");
-    }, 3000);
-  </script>
-
-</body>
-</html>
