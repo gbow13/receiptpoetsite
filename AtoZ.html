@@ -3,41 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>A to Z | Receipt Poet</title>
+  <title>A to Z – The Receipt Poet</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
 </head>
 <body>
+
+  <!-- Header with hero image and Instagram icon -->
   <header>
-    <div class="header-container">
+    <div class="hero-container">
       <div class="social-links">
         <a href="https://instagram.com/thereceiptpoet" target="_blank" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
         </a>
       </div>
+      <img src="images/hero.jpg" alt="Hero Image" class="landing-img" />
     </div>
   </header>
 
+  <!-- Main AtoZ content -->
   <main class="subpage-layout">
     <div class="slideshow">
-      <img src="images/AZ-closer.jpg" alt="A to Z 1" class="slide" />
-      <img src="images/AZ-close-up.jpg" alt="A to Z 2" class="slide hidden" />
-      <img src="images/AZ-Frame.jpg" alt="A to Z 3" class="slide hidden" />
+      <img src="images/AZ1.jpg" class="slide" />
+      <img src="images/AZ2.jpg" class="slide hidden" />
+      <img src="images/AZ3.jpg" class="slide hidden" />
     </div>
+
     <div class="subpage-text">
       <h2>A to Z</h2>
-      <p>This series documents an artistic exploration from A to Z using nothing but printed till receipts as canvas. Each letter captures a different concept, mood, or moment.</p>
+      <p>This project is a creative experiment where each letter of the alphabet is given a poetic twist, printed on a till receipt.</p>
+      <p>Each piece balances humor, social commentary, and the constraints of the medium to create something that is both fleeting and collectible.</p>
     </div>
   </main>
 
+  <!-- Simple JavaScript for slideshow -->
   <script>
+    let currentSlide = 0;
     const slides = document.querySelectorAll(".slide");
-    let current = 0;
+
     setInterval(() => {
-      slides[current].classList.add("hidden");
-      current = (current + 1) % slides.length;
-      slides[current].classList.remove("hidden");
+      slides[currentSlide].classList.add("hidden");
+      currentSlide = (currentSlide + 1) % slides.length;
+      slides[currentSlide].classList.remove("hidden");
     }, 3000);
   </script>
+
 </body>
 </html>
