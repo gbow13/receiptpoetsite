@@ -66,6 +66,20 @@ body {
 .tile:hover img {
   opacity: 0.4;
 }
+.slideshow-container {
+  width: 100%;
+  max-width: 50vw;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
 
 .tile:hover .tile-label {
   opacity: 1;
