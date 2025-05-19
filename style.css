@@ -17,33 +17,6 @@ img {
   display: block;
 }
 
-/* Header image (Landing page) */
-.hero-container {
-  position: relative;
-  width: 100%;
-  max-height: 50vh;
-  overflow: hidden;
-}
-
-.landing-img {
-  width: 100%;
-  display: block;
-  object-fit: cover;
-}
-
-/* Instagram icon (shared across all pages) */
-.social-links {
-  position: absolute;
-  top: 1rem;
-  left: 1rem;
-  z-index: 10;
-}
-
-.social-links i {
-  font-size: 2rem;
-  color: black;
-}
-
 /* Intro text under hero image (Landing page) */
 .intro-text {
   text-align: center;
@@ -137,4 +110,33 @@ img {
   font-size: 1.1rem;
   line-height: 1.6;
   font-family: 'Courier New', Courier, monospace;
+}
+.hero-container {
+  position: relative;
+  width: 100%;
+  max-height: 50vh;
+  overflow: hidden;
+}
+
+.landing-img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+.social-links {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 10;
+}
+
+.social-links a {
+  font-size: 2rem;
+  color: black;
+  text-decoration: none;
+}
+
+.social-links a:hover {
+  color: gray;
 }
