@@ -19,6 +19,7 @@ body {
   align-items: center;
   padding: 1.5rem 2rem;
   border-bottom: 1px solid #ccc;
+  background-color: white;
 }
 
 .page-header h1 {
@@ -26,10 +27,17 @@ body {
   font-weight: bold;
 }
 
-.instagram-icon {
-  width: 36px;
-  height: 36px;
+/* Instagram logo */
+.header-right a {
+  display: inline-block;
 }
+
+.instagram-icon {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
 
 /* Main content */
 .page-content {
