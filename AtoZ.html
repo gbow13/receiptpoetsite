@@ -10,6 +10,25 @@
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
   />
 </head>
+<script>
+    let slides = document.querySelectorAll(".slide");
+    let currentSlide = 0;
+  
+    function showSlide(index) {
+      slides.forEach((slide, i) => {
+        slide.classList.toggle("active", i === index);
+      });
+    }
+  
+    function nextSlide() {
+      currentSlide = (currentSlide + 1) % slides.length;
+      showSlide(currentSlide);
+    }
+  
+    showSlide(currentSlide);
+    setInterval(nextSlide, 4000); // Change every 4 seconds
+  </script>
+  
 <body>
 
     <header>
@@ -25,13 +44,17 @@
         </div>
       </header>
 
-  <!-- Main AtoZ content -->
-  <main class="subpage-layout">
-    <div class="slideshow">
-      <img src="images/AZ-closer.jpg" class="slide" />
-      <img src="images/AZ-close-up.jpg" class="slide hidden" />
-      <img src="images/AZ-Frame.jpg" class="slide hidden" />
-    </div>
+    <div class="slideshow-container">
+        <div class="slide fade">
+          <img src="images/AZ-closer.jpg" alt="AtoZ Slide 1">
+        </div>
+        <div class="slide fade">
+          <img src="images/AZ-close-up.jpg" alt="AtoZ Slide 2">
+        </div>
+        <div class="slide fade">
+          <img src="images/AZ-Frame.jpg" alt="AtoZ Slide 3">
+        </div>
+      </div>
 
     <div class="subpage-text">
       <h2>A to Z</h2>
