@@ -181,3 +181,7 @@ header {
   flex-direction: column;
   align-items: center;
 }
+.static-contact-image {
+  width: 100%;
+  display: block;
+}
