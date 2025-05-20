@@ -226,3 +226,18 @@ header {
 .contact-form button:hover {
   background-color: #333;
 }
+.buy-prints-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  background-color: black;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.buy-prints-button:hover {
+  background-color: #333;
+}
