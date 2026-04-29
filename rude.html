@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rude 2026 | The Receipt Poet</title>
+  <link rel="icon" href="favicon.png" type="image/png" />
+  <link rel="stylesheet" href="style.css" />
+  <script defer>
+    let currentIndex = 0;
+    function cycleSlides() {
+      const slides = document.querySelectorAll('.slide');
+      slides.forEach((slide, index) => {
+        slide.classList.remove('active');
+        if (index === currentIndex) {
+          slide.classList.add('active');
+        }
+      });
+      currentIndex = (currentIndex + 1) % slides.length;
+    }
+    window.onload = () => {
+      cycleSlides();
+      setInterval(cycleSlides, 4000);
+    };
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R94P0B679V"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-R94P0B679V');
+</script>
+
+</head>
+<body>
+  <header>
+    <a href="index.html">
+      <img src="images/hero.jpg" alt="Hero" class="landing-img" />
+    </a>
+    <div class="social-links">
+      <a href="https://instagram.com/thereceiptpoet" target="_blank" aria-label="Instagram">
+        <i class="fab fa-instagram"></i>
+      </a>
+    </div>
+  </header>
+
+  <main class="subpage-container">
+    <div class="slideshow-container">
+      <img src="images/Rude-full.jpg" class="slide active" alt="Rude slide 1" />
+      <img src="images/Rude-close.jpg" class="slide" alt="Rude slide 2" />
+      <img src="images/Rude-frame.jpg" class="slide" alt="Rude slide 3" />
+    </div>
+    <div class="text-content">
+      <h2>Rude (2026)</h2>
+      <p>Rude is a collection of items that all have some element of rudeness in their description. 
+      </p>
+      <a href="contact.html" class="buy-prints-button">Buy Prints</a>
+      <p>From £30.00</p>
+    </div>
+  </main>
+  <footer class="footer">
+    <a href="index.html" class="home-button">← Back to Home</a>
+    <p class="copyright">© 2026 The Receipt Poet. All rights reserved.</p>
+  </footer>
+</body>
+</html>
